@@ -12,8 +12,4 @@ public interface UserDao {
 
    User getUserByCarModelAndSeries(String model, int series);
 
-   void cleanUsersTable();
-
-   void cleanCarsTable();
-
 }

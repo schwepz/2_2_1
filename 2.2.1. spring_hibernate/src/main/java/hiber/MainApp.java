@@ -15,10 +15,6 @@ public class MainApp {
 
       UserService userService = context.getBean(UserService.class);
 
-      userService.cleanUsersTable();
-      userService.cleanCarsTable();
-
-
       User user;
 
       user = new User("User1", "Lastname1", "user1@mail.ru");

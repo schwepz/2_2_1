@@ -13,7 +13,5 @@ public interface UserService {
 
     User getUserByCarModelAndSeries(String model, int series);
 
-    void cleanUsersTable();
 
-    void cleanCarsTable();
 }

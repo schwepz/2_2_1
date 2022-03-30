@@ -9,7 +9,7 @@ public class User {
 
    @Id
    @GeneratedValue
-   private Long id;
+   private long id;
 
    @Column(name = "name")
    private String firstName;
@@ -21,7 +21,6 @@ public class User {
    private String email;
 
    @OneToOne(cascade=CascadeType.ALL)
-   @JoinColumn(name = "car_id")
    private Car car;
 
    public User() {}
