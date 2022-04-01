@@ -15,24 +15,17 @@ public class MainApp {
 
       UserService userService = context.getBean(UserService.class);
 
-      User user;
+      userService.add(new User("User1", "Lastname1", "user1@mail.ru",
+              new Car(2005, "Renault Kaptur")));
 
-      user = new User("User1", "Lastname1", "user1@mail.ru");
-      user.setCar(new Car(2005, "Renault Kaptur"));
-      userService.add(user);
+      userService.add(new User("User2", "Lastname2", "user2@mail.ru",
+              new Car(8, "Chery Tiggo")));
 
-      user = new User("User2", "Lastname2", "user2@mail.ru");
-      user.setCar(new Car(8, "Chery Tiggo"));
-      userService.add(user);
+      userService.add(new User("User3", "Lastname3", "user3@mail.ru",
+              new Car(2020, "Toyota RAV4")));
 
-      user = new User("User3", "Lastname3", "user3@mail.ru");
-      user.setCar(new Car(2020, "Toyota RAV4"));
-      userService.add(user);
-
-      user = new User("User4", "Lastname4", "user4@mail.ru");
-      user.setCar(new Car(200, "Mitsubishi L200"));
-      userService.add(user);
-
+      userService.add(new User("User4", "Lastname4", "user4@mail.ru",
+              new Car(200, "Mitsubishi L200")));
 
       List<User> users = userService.listUsers();
       for (User usr : users) {
@@ -46,9 +39,6 @@ public class MainApp {
       System.out.println("The user who owns the car Mitsubishi L200: \n"
               +userService.getUserByCarModelAndSeries("Mitsubishi L200", 200));
 
-
-
       context.close();
-
    }
 }
